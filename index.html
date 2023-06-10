@@ -1,890 +1,1095 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Lazyclick - Add WhatsApp Login to your app or website Free, Forever</title>
+    <meta content="Add WhatsApp Login to your app or website Free, Forever" name="description">
+    <meta content="lazyclick" name="keywords">
+    <meta name="author" content="Lazyclick">
 
-  <title>Lazyclick - Add WhatsApp Login to your app or website Free, Forever</title>
-  <meta content="Add WhatsApp Login to your app or website Free, Forever" name="description">
-  <meta content="lazyclick" name="keywords">
-  <meta name="author" content="Lazyclick">
+    <!-- OG Tags -->
+    <meta property="og:title" content="Lazyclick">
+    <meta property="og:description" content="Add WhatsApp Login to your app or website Free, Forever">
+    <meta property="og:image:secure_url" content="https://lazyclick.in/assets/img/lazyclick-logo-circle.png">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lazyclick.in/">
 
-  <!-- OG Tags -->
-  <meta property="og:title" content="Lazyclick">
-  <meta property="og:description" content="Add WhatsApp Login to your app or website Free, Forever">
-  <meta property="og:image:secure_url" content="https://lazyclick.in/assets/img/lazyclick-logo-circle.png">
-  <meta property="og:image:width" content="500">
-  <meta property="og:image:height" content="500">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lazyclick.in/">
+    <link href="assets/css/web.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">WebFont.load({ google: { families: ["Space Grotesk:300,regular,500,600,700"] } });</script>
+    <link href="https://lazyclick.in/assets/img/lazyclick-logo-circle.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://lazyclick.in/assets/img/lazyclick-logo-circle.png" rel="apple-touch-icon" />
+    <style>
+        /* Font Imorvement*/
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-  <!-- Favicons -->
-  <link href="assets/img/lazyclick-logo-circle.png" rel="icon">
-  <link href="assets/img/lazyclick-logo.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Font Awesome CSS file -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-**********" crossorigin="anonymous" />
-
-  <!-- Font Awesome JS file -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-**********"
-    crossorigin="anonymous"></script>
+        /* Change Autocomplete styles in Chrome*/
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover,
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
 
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+            transition: background-color 5000s ease-in-out 0s;
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+        }
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script type="text/javascript" src="assets/js/lazyclick_free.js"></script>
+        .form-field-mobile-white,
+        .form-field-menu-mobile {
+            -webkit-text-fill-color: white;
+        }
+    </style>
 
-  <script>
-    function start() {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="assets/js/lazyclick_free.js"></script>
 
-      initFree(function (onFreeMessageSent) {
-        console.log(onFreeMessageSent);
-      },
-        function (onFreeMessageReceived) {
-          console.log(onFreeMessageReceived);
-        });
-    }
-  </script>
-  <script>
-    $(function () {
-      $('.copy-clipboard').tooltip({
-        trigger: 'manual'
-      }).on('click', function () {
-        var $this = $(this);
-        var text = $this.attr('data-clipboard-text');
-        navigator.clipboard.writeText(text).then(function () {
-          $this.attr('title', 'Copied!');
-          $this.tooltip('show');
-          setTimeout(function () {
-            $this.attr('title', 'Copy to Clipboard');
-            $this.tooltip('hide');
-          }, 1000);
-        }).catch(function (error) {
-          console.error('Failed to copy text: ', error);
-        });
-      }).on('mouseout', function () {
-        $(this).tooltip('hide');
-      });
-    });
-  </script>
-
+    <script>
+        function start() {
+            initFree(function (onFreeMessageSent) {
+                console.log(onFreeMessageSent);
+            },
+                function (onFreeMessageReceived) {
+                    console.log(onFreeMessageReceived);
+                });
+        }
+    </script>
 </head>
 
 <body>
+    <div data-animation="default" class="navbar bg-primary-orange__10 w-nav" data-easing2="ease"
+        fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium"
+        data-w-id="a51da8e5-6943-4272-9dbb-f6b28192dada" role="banner" data-no-scroll="1" data-duration="400">
+        <div class="navigation">
+            <div class="container flex-horizontal-center new w-container">
+                <div class="navbar-border-bottom hide"></div><a href="" class="spacing__auto-0 new w-nav-brand">
+                    <h3>LAZYCLICK</h3>
+                </a>
+                <nav role="navigation" class="menu-mobile-open-wrap is-tablet w-nav-menu">
+                    <div class="menu-mobile-wrap">
+                        <div class="menu-items-mobile-wrap">
+                            <!-- <a href="/pricing" class="mobile-menu-item w-nav-link">Pricing</a>
+                            <a href="/ambassadors" class="mobile-menu-item w-nav-link">Ambassadors</a> -->
+                            <!-- <div data-hover="true" data-delay="300" class="mobile-menu-item is-dropdown w-dropdown">
+                                <div class="dropdown-toggle w-dropdown-toggle">
+                                    <div class="dropdown-icon w-embed"><svg width=" 100%" height=" 100%"
+                                            viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z"
+                                                fill="currentColor" />
+                                        </svg></div>
+                                    <div>Resources</div>
+                                </div>
+                                <nav class="navlink_dropdown-list w-dropdown-list">
+                                    <div class="navlink_container">
+                                        <div class="navlink_dropdown-content">
+                                            <div class="navlink_dropdown-content-left is-desktop">
+                                                <div class="nav-link_dropdown-link-list">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps">LEARN</h4>
+                                                    <div class="w-embed">
+                                                        <style>
+                                                            .nav-link_dropdown-link:hover .nav-link_dropdown-item_heading {
+                                                                color: #FF6702;
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <div class="nav-link_dropdown-item-wrapper"><a
+                                                            href="https://learn.reword.co" target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a29cb110de8599de7d7_knowledge-base-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Knowledge
+                                                                    base</div>
+                                                                <p class="paragraph-tiny">Everything you need to know
+                                                                    about using Reword.</p>
+                                                            </div>
+                                                        </a><a href="https://learn.reword.co/using-the-reword-editor"
+                                                            target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a2a4adfea70a229f04f_walkthorugh-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Walkthrough
+                                                                </div>
+                                                                <p class="paragraph-tiny">Have a few minutes? We&#x27;ll
+                                                                    show you theropes of Reword.</p>
+                                                            </div>
+                                                        </a><a
+                                                            href="https://www.youtube.com/channel/UCvm8nY1SlE7VbBkcY5_HN2w"
+                                                            target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a29721f8a5229b76205_videos-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Videos</div>
+                                                                <p class="paragraph-tiny">Cut your learning curve with
+                                                                    our library of video guides.</p>
+                                                            </div>
+                                                        </a></div>
+                                                </div>
+                                                <div class="nav-link_dropdown-link-list">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps">Free tools
+                                                    </h4>
+                                                    <div class="nav-link_dropdown-item-wrapper"><a
+                                                            href="/free-tools/headline-tool"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a29721f8ae4f9b76204_H1-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Headline
+                                                                    generator</div>
+                                                                <p class="paragraph-tiny">Get 5 optimised headlines for
+                                                                    your next article idea.</p>
+                                                            </div>
+                                                        </a><a href="/free-tools/subheading-tool"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a29fe44f3317eb2a46b_H2-Icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Subheading
+                                                                    generator</div>
+                                                                <p class="paragraph-tiny">Brainstorm a list of relevant
+                                                                    subtitles for your topic.</p>
+                                                            </div>
+                                                        </a><a href="/free-tools/topic-idea-tool"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a293f60de6ceae8d0c5_Topic-Idea-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Topic idea
+                                                                    generator</div>
+                                                                <p class="paragraph-tiny">Get a list of 5 article ideas
+                                                                    to fuel your content strategy.</p>
+                                                            </div>
+                                                        </a></div>
+                                                </div>
+                                                <div class="nav-link_dropdown-link-list">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps">Company</h4>
+                                                    <div class="nav-link_dropdown-item-wrapper"><a
+                                                            href="https://o6vxe1gnt13.typeform.com/to/kWCVVB6Z"
+                                                            target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a294ae6963507b9950e_Contact-us-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Contact us
+                                                                </div>
+                                                                <p class="paragraph-tiny">Speak to a human about your
+                                                                    Reword experience.</p>
+                                                            </div>
+                                                        </a><a href="https://twitter.com/letsreword" target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a293ac3ae1086dcf1fe_twitter-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Twitter
+                                                                </div>
+                                                                <p class="paragraph-tiny">Join the conversation on our
+                                                                    official Twitter profile.</p>
+                                                            </div>
+                                                        </a><a href="https://learn.reword.co/feature-roadmap"
+                                                            target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a2aa7a860cb94ccfa1c_roadmap-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Product
+                                                                    roadmap</div>
+                                                                <p class="paragraph-tiny">Stay in the loop with what
+                                                                    we&#x27;re working on next.</p>
+                                                            </div>
+                                                        </a></div>
+                                                </div>
+                                            </div>
+                                            <div class="navlink_dropdown-content-left is-mobile">
+                                                <div class="nav-link-wrapper">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps is-zero-rem">
+                                                        LEARN</h4>
+                                                    <div class="nav-link-sub-item-wrapper"><a
+                                                            href="https://learn.reword.co/"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Knowledge base
+                                                            </h4>
+                                                        </a><a href="https://learn.reword.co/using-the-reword-editor"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Walkthrough</h4>
+                                                        </a><a
+                                                            href="https://www.youtube.com/channel/UCvm8nY1SlE7VbBkcY5_HN2w"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Videos</h4>
+                                                        </a></div>
+                                                </div>
+                                                <div class="nav-link-wrapper">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps is-zero-rem">
+                                                        FREE TOOLS</h4>
+                                                    <div class="nav-link-sub-item-wrapper"><a
+                                                            href="https://reword-staging.webflow.io/free-tools/headline-generator"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Headline
+                                                                generator</h4>
+                                                        </a><a
+                                                            href="https://reword-staging.webflow.io/free-tools/subheading-generator"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Subheading
+                                                                generator</h4>
+                                                        </a><a
+                                                            href="https://reword-staging.webflow.io/free-tools/article-idea-generator"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Topic idea
+                                                                generator</h4>
+                                                        </a></div>
+                                                </div>
+                                                <div class="nav-link-wrapper">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps is-zero-rem">
+                                                        COMPANY</h4>
+                                                    <div class="nav-link-sub-item-wrapper"><a
+                                                            href="https://o6vxe1gnt13.typeform.com/to/kWCVVB6Z"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Contact us</h4>
+                                                        </a><a href="https://twitter.com/letsreword"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Twitter</h4>
+                                                        </a><a href="https://learn.reword.co/feature-roadmap"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Product roadmap
+                                                            </h4>
+                                                        </a></div>
+                                                </div>
+                                            </div>
+                                            <div class="navlink_dropdown-content-right">
+                                                <div class="navlink_dropdown-content-wrapper">
+                                                    <div class="navlink_dropdown-walkthrough-item-wrapper">
+                                                        <div class="navbar_blog-item"><a
+                                                                href="https://learn.reword.co/using-the-reword-editor"
+                                                                target="_blank"
+                                                                class="navbar_blog-image-wrapper w-inline-block"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64015277017842ffca4ec3e5_walkthrough.webp"
+                                                                    loading="lazy" alt="" class="navbar6_blog-image" />
+                                                                <div class="play-icon w-embed"><svg width="40"
+                                                                        height="40" viewBox="0 0 40 40" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <rect width="40" height="40" fill="white" />
+                                                                        <path
+                                                                            d="M19.9999 36.6668C29.2047 36.6668 36.6666 29.2049 36.6666 20.0002C36.6666 10.7954 29.2047 3.3335 19.9999 3.3335C10.7952 3.3335 3.33325 10.7954 3.33325 20.0002C3.33325 29.2049 10.7952 36.6668 19.9999 36.6668Z"
+                                                                            stroke="currentColor" stroke-width="3.33333"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M16.6667 13.3335L26.6667 20.0002L16.6667 26.6668V13.3335Z"
+                                                                            stroke="currentColor" stroke-width="3.33333"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html">Lazyclick</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <!-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
-          <li><a class="getstarted scrollto active" href="assets/pdf/Lazyclick_Integration_Guide.pdf"
-              download="Lazyclick_Integration_Guide.pdf">Integration Guide</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
 
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
-    <div class="container-fluid" data-aos="fade-up">
-      <div class="row justify-content-center">
-        <div class="col-xl-6 col-lg-6 pt-3 text-center">
-          <h1 class="d-inline">Add <p class="h7 d-inline">WhatsApp Login</p> to your app/website.</h1>
-          <br>
-          <h2>Say 👋 goodbye to OTPs and hello to a secure, seamless WhatsApp login. Free forever for unlimited users
-          </h2>
-          <div><a onclick="start()" class="btn-get-started">Get Started</a></div>
-        </div>
-      </div>
-    </div>
-
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section =======  -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-xl-5 col-lg-6 d-flex justify-content-center video-box align-items-stretch position-relative">
-            <video width="360" height="640" autoplay muted loop>
-              <source src="assets/click_preview.mp4" type="video/mp4">
-            </video>
-          </div>
-
-          <div
-            class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <h6>USER JOURNEY</h6>
-            <h3>Two Clicks and Done</h3>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-fingerprint"></i></div>
-              <h4 class="title"><a href="">Step 1</a></h4>
-              <p class="description">User clicks on the "WhatsApp Login" button on your login page.</p>
-            </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-send"></i></div>
-              <h4 class="title"><a href="">Step 2</a></h4>
-              <p class="description">Sends a pre-filled WhatsApp message.</p>
-            </div>
-
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-box-arrow-up-left"></i></div>
-              <h4 class="title"><a href="">Step 3</a></h4>
-              <p class="description">WhatsApp redirects the user back to your website or app.</p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <!-- <section id="counts" class="counts">
-      <div class="container">
-
-        <div class="row counters">
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p>Clients</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p>Projects</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p>Hours Of Support</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
-              class="purecounter"></span>
-            <p>Hard Workers</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section> --><!-- End Counts Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h6>BENEFITS</h6>
-          <h3>So, why WhatsApp Login?</h3>
-        </div>
-
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-blue">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174">
-                  </path>
-                </svg>
-                <i class="bx bx-tachometer"></i>
-              </div>
-              <h4><a href="">Grow your Business </a></h4>
-              <p>Get more users and drive more conversions with WhatsApp. </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-orange ">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
-                  </path>
-                </svg>
-                <i class="bx bx-code"></i>
-              </div>
-              <h4><a href="">No Code Integration</a></h4>
-              <p>Simply add one line of code and you are ready to go.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-pink">
-              <div class="icon">
-                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
-                    d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
-                  </path>
-                </svg>
-                <i class="bi bi-cash-coin"></i>
-              </div>
-              <h4><a href="">Save OTP Cost</a></h4>
-              <p>Stop spending on SMS OTPs. WhatsApp Login is free forever, for unlimited users. </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h6>DEVELOPER EASE</h6>
-          <h3>No code or pro code</h3>
-
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-12">
-                <div class="d-flex justify-content-center">
-                  <div class="icon-box mr-3 mt-3" data-aos="fade-up" data-aos-delay="100"
-                    style="margin-right: 10px !important;">
-                    <img width="50" height="50" src="assets/img/lazyclick-logo-circle.png"></img>
-                  </div>
-                  <div class="icon-box mr-3 mt-3" data-aos="fade-up" data-aos-delay="100"
-                    style="margin-right: 10px !important;">
-                    <img width="50" height="50" src="assets/img/rounded-shopify.png"></img>
-                  </div>
-                  <div class="icon-box mr-3 mt-3" data-aos="fade-up" data-aos-delay="200"
-                    style="margin-right: 10px !important;">
-                    <img width="50" height="50" src="assets/img/rounded-wordpress.png"></img>
-                  </div>
-                  <div class="icon-box mr-3 mt-3" data-aos="fade-up" data-aos-delay="300"
-                    style="margin-right: 10px !important;">
-                    <img width="50" height="50" src="assets/img/rounded-js.png"></img>
-                  </div>
-                  <div class="icon-box mr-3 mt-3" data-aos="fade-up" data-aos-delay="400"
-                    style="margin-right: 10px !important;">
-                    <img width="50" height="50" src="assets/img/rounded-android.png"></img>
-                  </div>
+                                                                    <style>
+                                                                        .navbar_blog-image-wrapper:hover>.play-icon {
+                                                                            color: #ff6702;
+                                                                        }
+                                                                    </style>
+                                                                </div>
+                                                            </a>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="margin-bottom margin-tiny">
+                                                                    <div class="nav-link_dropdown-item_heading">Watch
+                                                                        the walkthrough</div>
+                                                                </div>
+                                                                <p class="paragraph-tiny">Have a few minutes? We&#x27;ll
+                                                                    show you the ropes of Reword and how it can level up
+                                                                    your content workflow.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div><a id="w-node-_178f95f2-c9af-f47e-d6c9-51adb3208cf7-b3208c8c"
+                                                        href="https://learn.reword.co/using-the-reword-editor"
+                                                        target="_blank" class="play-the-video-wrapper w-inline-block">
+                                                        <div class="play-the-video-text">Play the video</div>
+                                                        <div class="paly-icon-embed w-embed"><svg width="14" height="14"
+                                                                viewBox="0 0 14 14" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M2.91675 7H11.0834" stroke="#FF6702"
+                                                                    stroke-width="1.16667" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path d="M7 2.9165L11.0833 6.99984L7 11.0832"
+                                                                    stroke="#FF6702" stroke-width="1.16667"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="menu-mobile-wrap">
+                        <div class="menu-items-mobile-wrap">
+                            <!-- <a href="https://write.reword.co/users/sign_in" class="mobile-menu-item w-nav-link">Log In</a></div> -->
+                            <div class="form-menu-mobile-wrap">
+                                <div class="show-tablet full">
+                                    <a href="assets/pdf/Lazyclick_Integration_Guide.pdf"
+                                        download="Lazyclick_Integration_Guide.pdf"
+                                        class="button-web-generic is-navbar w-inline-block">
+                                        <div class="button-content-wrapper-generic full">
+                                            <div class="button-text-wrapper is-navbar">
+                                                <div class="text__semi_bold">Integration Guide</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </nav>
+                <div class="menu-button w-nav-button">
+                    <div class="burger-line first"></div>
+                    <div class="burger-line second"></div>
+                    <div class="burger-line third"></div>
+                    <div class="svg-hide w-icon-nav-menu"></div>
                 </div>
-              </div>
+                <div class="hide-tablet"><a href="assets/pdf/Lazyclick_Integration_Guide.pdf"
+                        download="Lazyclick_Integration_Guide.pdf" class="button-web-generic is-navbar w-inline-block">
+                        <div class="button-content-wrapper-generic full">
+                            <div class="button-text-wrapper is-navbar">
+                                <div class="text__semi_bold">Integration Guide</div>
+                            </div>
+                        </div>
+                    </a></div>
             </div>
-          </div>
-          <br>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-md-8">
-                <div class="card">
-                  <div class="card-body d-flex justify-content-between align-items-center">
-                    All it takes is copy-paste one line of code
-                    <i class="fa fa-clipboard copy-clipboard"
-                      data-clipboard-text="<script src=&quot;https://www.lazyclick.in/lazyclick.js&quot;&gt;&lt;/script&gt;"
-                      data-toggle="tooltip" data-placement="bottom" title="Copied!"></i>
-                  </div>
-                  <div class="card-header" style="text-align:left;">
-                    <pre><code>&lt;script src=&quot;https://www.lazyclick.in/lazyclick.js&quot;&gt;&lt;/script&gt;</code></pre>
-                    <pre><code>
-&lt;script&gt;
+        </div>
+    </div>
+    <div data-animation="default" class="navbar-scroll bg-primary-orange__10 w-nav" data-easing2="ease"
+        fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium"
+        data-w-id="76c00c6e-5436-34ae-6d88-e986ee99c4cf" role="banner" data-no-scroll="1" data-duration="400">
+        <div class="navigation">
+            <div class="container flex-horizontal-center new w-container"><a href="/"
+                    class="spacing__auto-0 new w-nav-brand"><img
+                        src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/634d904513981b61b7129694_Reword%20Small.svg"
+                        loading="eager" alt="" /></a>
+                <nav role="navigation" class="menu-mobile-open-wrap is-tablet w-nav-menu">
+                    <!-- <div class="menu-mobile-wrap">
+                        <div class="menu-items-mobile-wrap"><a href="/pricing"
+                                class="mobile-menu-item w-nav-link">Pricing</a>
+                            <div data-hover="true" data-delay="300" class="mobile-menu-item is-dropdown w-dropdown">
+                                <div class="dropdown-toggle w-dropdown-toggle">
+                                    <div class="dropdown-icon w-embed"><svg width=" 100%" height=" 100%"
+                                            viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z"
+                                                fill="currentColor" />
+                                        </svg></div>
+                                    <div>Resources</div>
+                                </div>
+                                <nav class="navlink_dropdown-list w-dropdown-list">
+                                    <div class="navlink_container">
+                                        <div class="navlink_dropdown-content">
+                                            <div class="navlink_dropdown-content-left is-desktop">
+                                                <div class="nav-link_dropdown-link-list">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps">LEARN</h4>
+                                                    <div class="w-embed">
+                                                        <style>
+                                                            .nav-link_dropdown-link:hover .nav-link_dropdown-item_heading {
+                                                                color: #FF6702;
+                                                            }
+                                                        </style>
+                                                    </div>
+                                                    <div class="nav-link_dropdown-item-wrapper"><a
+                                                            href="https://learn.reword.co" target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a29cb110de8599de7d7_knowledge-base-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Knowledge
+                                                                    base</div>
+                                                                <p class="paragraph-tiny">Everything you need to know
+                                                                    about using Reword.</p>
+                                                            </div>
+                                                        </a><a href="https://learn.reword.co/using-the-reword-editor"
+                                                            target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a2a4adfea70a229f04f_walkthorugh-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Walkthrough
+                                                                </div>
+                                                                <p class="paragraph-tiny">Have a few minutes? We&#x27;ll
+                                                                    show you theropes of Reword.</p>
+                                                            </div>
+                                                        </a><a
+                                                            href="https://www.youtube.com/channel/UCvm8nY1SlE7VbBkcY5_HN2w"
+                                                            target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a29721f8a5229b76205_videos-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Videos</div>
+                                                                <p class="paragraph-tiny">Cut your learning curve with
+                                                                    our library of video guides.</p>
+                                                            </div>
+                                                        </a></div>
+                                                </div>
+                                                <div class="nav-link_dropdown-link-list">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps">Free tools
+                                                    </h4>
+                                                    <div class="nav-link_dropdown-item-wrapper"><a
+                                                            href="/free-tools/headline-tool"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a29721f8ae4f9b76204_H1-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Headline
+                                                                    generator</div>
+                                                                <p class="paragraph-tiny">Get 5 optimised headlines for
+                                                                    your next article idea.</p>
+                                                            </div>
+                                                        </a><a href="/free-tools/subheading-tool"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a29fe44f3317eb2a46b_H2-Icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Subheading
+                                                                    generator</div>
+                                                                <p class="paragraph-tiny">Brainstorm a list of relevant
+                                                                    subtitles for your topic.</p>
+                                                            </div>
+                                                        </a><a href="/free-tools/topic-idea-tool"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a293f60de6ceae8d0c5_Topic-Idea-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Topic idea
+                                                                    generator</div>
+                                                                <p class="paragraph-tiny">Get a list of 5 article ideas
+                                                                    to fuel your content strategy.</p>
+                                                            </div>
+                                                        </a></div>
+                                                </div>
+                                                <div class="nav-link_dropdown-link-list">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps">Company</h4>
+                                                    <div class="nav-link_dropdown-item-wrapper"><a
+                                                            href="https://o6vxe1gnt13.typeform.com/to/kWCVVB6Z"
+                                                            target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a294ae6963507b9950e_Contact-us-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Contact us
+                                                                </div>
+                                                                <p class="paragraph-tiny">Speak to a human about your
+                                                                    Reword experience.</p>
+                                                            </div>
+                                                        </a><a href="https://twitter.com/letsreword" target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a293ac3ae1086dcf1fe_twitter-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Twitter
+                                                                </div>
+                                                                <p class="paragraph-tiny">Join the conversation on our
+                                                                    official Twitter profile.</p>
+                                                            </div>
+                                                        </a><a href="https://learn.reword.co/feature-roadmap"
+                                                            target="_blank"
+                                                            class="nav-link_dropdown-link w-inline-block">
+                                                            <div class="navlink_icon-wrapper"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64555a2aa7a860cb94ccfa1c_roadmap-icon.svg"
+                                                                    loading="lazy" alt="" class="icon-height-xsmall" />
+                                                            </div>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="nav-link_dropdown-item_heading">Product
+                                                                    roadmap</div>
+                                                                <p class="paragraph-tiny">Stay in the loop with what
+                                                                    we&#x27;re working on next.</p>
+                                                            </div>
+                                                        </a></div>
+                                                </div>
+                                            </div>
+                                            <div class="navlink_dropdown-content-left is-mobile">
+                                                <div class="nav-link-wrapper">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps is-zero-rem">
+                                                        LEARN</h4>
+                                                    <div class="nav-link-sub-item-wrapper"><a
+                                                            href="https://learn.reword.co/"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Knowledge base
+                                                            </h4>
+                                                        </a><a href="https://learn.reword.co/using-the-reword-editor"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Walkthrough</h4>
+                                                        </a><a
+                                                            href="https://www.youtube.com/channel/UCvm8nY1SlE7VbBkcY5_HN2w"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Videos</h4>
+                                                        </a></div>
+                                                </div>
+                                                <div class="nav-link-wrapper">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps is-zero-rem">
+                                                        FREE TOOLS</h4>
+                                                    <div class="nav-link-sub-item-wrapper"><a
+                                                            href="https://reword-staging.webflow.io/free-tools/headline-generator"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Headline
+                                                                generator</h4>
+                                                        </a><a
+                                                            href="https://reword-staging.webflow.io/free-tools/subheading-generator"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Subheading
+                                                                generator</h4>
+                                                        </a><a
+                                                            href="https://reword-staging.webflow.io/free-tools/article-idea-generator"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Topic idea
+                                                                generator</h4>
+                                                        </a></div>
+                                                </div>
+                                                <div class="nav-link-wrapper">
+                                                    <h4 class="nav-link_dropdown-item_heading is-all-caps is-zero-rem">
+                                                        COMPANY</h4>
+                                                    <div class="nav-link-sub-item-wrapper"><a
+                                                            href="https://o6vxe1gnt13.typeform.com/to/kWCVVB6Z"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Contact us</h4>
+                                                        </a><a href="https://twitter.com/letsreword"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Twitter</h4>
+                                                        </a><a href="https://learn.reword.co/feature-roadmap"
+                                                            class="nav-link_dropdown-link-list w-inline-block">
+                                                            <h4 class="nav-link_dropdown-item_heading">Product roadmap
+                                                            </h4>
+                                                        </a></div>
+                                                </div>
+                                            </div>
+                                            <div class="navlink_dropdown-content-right">
+                                                <div class="navlink_dropdown-content-wrapper">
+                                                    <div class="navlink_dropdown-walkthrough-item-wrapper">
+                                                        <div class="navbar_blog-item"><a
+                                                                href="https://learn.reword.co/using-the-reword-editor"
+                                                                target="_blank"
+                                                                class="navbar_blog-image-wrapper w-inline-block"><img
+                                                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64015277017842ffca4ec3e5_walkthrough.webp"
+                                                                    loading="lazy" alt="" class="navbar6_blog-image" />
+                                                                <div class="play-icon w-embed"><svg width="40"
+                                                                        height="40" viewBox="0 0 40 40" fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                        <rect width="40" height="40" fill="white" />
+                                                                        <path
+                                                                            d="M19.9999 36.6668C29.2047 36.6668 36.6666 29.2049 36.6666 20.0002C36.6666 10.7954 29.2047 3.3335 19.9999 3.3335C10.7952 3.3335 3.33325 10.7954 3.33325 20.0002C3.33325 29.2049 10.7952 36.6668 19.9999 36.6668Z"
+                                                                            stroke="currentColor" stroke-width="3.33333"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                        <path
+                                                                            d="M16.6667 13.3335L26.6667 20.0002L16.6667 26.6668V13.3335Z"
+                                                                            stroke="currentColor" stroke-width="3.33333"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round" />
+                                                                    </svg>
+
+
+
+                                                                    <style>
+                                                                        .navbar_blog-image-wrapper:hover>.play-icon {
+                                                                            color: #ff6702;
+                                                                        }
+                                                                    </style>
+                                                                </div>
+                                                            </a>
+                                                            <div class="nav-link_item-text">
+                                                                <div class="margin-bottom margin-tiny">
+                                                                    <div class="nav-link_dropdown-item_heading">Watch
+                                                                        the walkthrough</div>
+                                                                </div>
+                                                                <p class="paragraph-tiny">Have a few minutes? We&#x27;ll
+                                                                    show you the ropes of Reword and how it can level up
+                                                                    your content workflow.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div><a id="w-node-_178f95f2-c9af-f47e-d6c9-51adb3208cf7-b3208c8c"
+                                                        href="https://learn.reword.co/using-the-reword-editor"
+                                                        target="_blank" class="play-the-video-wrapper w-inline-block">
+                                                        <div class="play-the-video-text">Play the video</div>
+                                                        <div class="paly-icon-embed w-embed"><svg width="14" height="14"
+                                                                viewBox="0 0 14 14" fill="none"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M2.91675 7H11.0834" stroke="#FF6702"
+                                                                    stroke-width="1.16667" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                                <path d="M7 2.9165L11.0833 6.99984L7 11.0832"
+                                                                    stroke="#FF6702" stroke-width="1.16667"
+                                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                            </svg></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div><a href="/ambassadors" class="mobile-menu-item w-nav-link">Ambassadors</a><a
+                                href="http://learn.reword.co/" target="_blank"
+                                class="mobile-menu-item hide w-nav-link">Learning</a>
+                        </div>
+                    </div> -->
+                    <div class="menu-mobile-wrap">
+                        <!-- <div class="menu-items-mobile-wrap">
+                            <a href="https://write.reword.co/users/sign_in" class="mobile-menu-item w-nav-link">Log In</a>
+                        </div> -->
+                        <div class="form-menu-mobile-wrap">
+                            <!-- <div class="form-block-menu-mobile hide w-form">
+                                <form id="wf-form--4" name="wf-form--4" data-name=""
+                                    action="https://app.convertkit.com/forms/3728599/subscriptions" method="post"
+                                    class="form"><input type="email" class="form-field-menu-mobile w-input"
+                                        maxlength="256" name="email_address-6" data-name="Email Address 6"
+                                        placeholder="Enter your email" id="email_address-6" required="" />
+                                    <div class="form-button-wrapper"><input type="submit" value="Join the BETA"
+                                            data-wait="Please wait..."
+                                            class="button-web-primary-large is-menu w-button" />
+                                        <div class="ml__5 is-form w-embed"><svg width="24" height="24"
+                                                viewBox="0 0 24 24" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 11H17V13H5V11Z"
+                                                    fill="currentcolor" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M15.5858 11.9997L12.2928 15.2929L13.7071 16.7071L18.4142 11.9996L13.7071 7.29286L12.2929 8.70714L15.5858 11.9997Z"
+                                                    fill="currentcolor" />
+                                            </svg></div>
+                                    </div><a href="#" class="button-web-primary-large hide w-inline-block">
+                                        <div class="flex-horizontal-center">
+                                            <div class="text-breaking__nowrap">Join the BETA</div>
+                                            <div class="ml__5 w-embed"><svg width="24" height="24" viewBox="0 0 24 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 11H17V13H5V11Z"
+                                                        fill="currentcolor" />
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M15.5858 11.9997L12.2928 15.2929L13.7071 16.7071L18.4142 11.9996L13.7071 7.29286L12.2929 8.70714L15.5858 11.9997Z"
+                                                        fill="currentcolor" />
+                                                </svg></div>
+                                        </div>
+                                    </a>
+                                </form>
+                                <div class="w-form-done">
+                                    <div>Thank you! Your submission has been received!</div>
+                                </div>
+                                <div class="w-form-fail">
+                                    <div>Oops! Something went wrong while submitting the form.</div>
+                                </div>
+                            </div> -->
+                            <div class="show-tablet"><a href="assets/pdf/Lazyclick_Integration_Guide.pdf"
+                                    download="Lazyclick_Integration_Guide.pdf"
+                                    class="button-web-generic is-navbar w-inline-block">
+                                    <div class="button-content-wrapper-generic full">
+                                        <div class="button-text-wrapper is-navbar">
+                                            <div class="text__semi_bold">Integration Guide</div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="menu-button w-nav-button">
+                    <div class="burger-line first"></div>
+                    <div class="burger-line second"></div>
+                    <div class="burger-line third"></div>
+                    <div class="svg-hide w-icon-nav-menu"></div>
+                </div>
+                <div class="hide-tablet"><a href="assets/pdf/Lazyclick_Integration_Guide.pdf"
+                        download="Lazyclick_Integration_Guide.pdf" class="button-web-generic is-navbar w-inline-block">
+                        <div class="button-content-wrapper-generic full">
+                            <div class="button-text-wrapper is-navbar">
+                                <div class="text__semi_bold">Integration Guide</div>
+                            </div>
+                        </div>
+                    </a></div>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <div class="main-wrapper">
+            <div id="hero" class="section-home-hero wf-section">
+                <div class="container flex-vertical-center w-container">
+                    <div class="wrap-position__relative">
+                        <h1 id="heading-mobile" class="mobile-display__visible max-width">Add <span
+                                class="text-span-orange-100">WhatsApp Login</span> to your app/website</h1>
+                        <div class="decor-underline text__orange-100 now w-embed"><svg width="160" height="11"
+                                viewBox="0 0 160 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M34.6102 2.23473C49.7135 1.91256 64.8251 1.70545 79.9366 1.6134C95.0481 1.52135 110.02 1.55203 125.057 1.69777C133.6 1.78215 142.15 1.89722 150.693 2.05063L151.852 0.478109C132.35 0.792614 112.856 1.18383 93.3627 1.65175C73.869 2.11967 54.3752 2.6643 34.8815 3.29331C23.9384 3.64617 13.0035 5.01437 2.06039 5.41326C1.41909 5.43627 0.457152 5.58969 0.0953964 6.17267C-0.241694 6.7173 0.383157 7.00112 0.901126 6.98578C21.217 6.50252 41.5493 5.45649 61.8735 5.85538C82.1976 6.25426 102.505 6.10572 122.788 7.39443C134.184 8.11549 151.86 9.5 154.5 10C157.14 10.5 158.577 9.75705 158.906 9.22776C159.268 8.65245 158.594 8.453 158.101 8.41465C137.867 6.62734 117.584 6.27727 97.2844 5.37211C76.985 4.46695 56.6527 4.01437 36.3286 4.0067C24.9086 4.0067 13.4886 5.13711 2.06861 5.41326L0.909347 6.98578C20.3948 6.27239 39.8886 4.64338 59.3823 4.08341C78.876 3.53111 98.3697 3.04784 117.863 2.64896C128.807 2.42651 139.758 2.21939 150.701 2.04296C151.342 2.03529 152.312 1.85886 152.666 1.28355C153.02 0.708235 152.37 0.478109 151.86 0.470439C136.741 0.20963 121.637 0.048542 106.526 0.0101877C91.4141 -0.0281665 76.4424 0.040871 61.4048 0.232642C52.8624 0.340034 44.3119 0.485781 35.7695 0.669881C35.1282 0.685223 34.158 0.853981 33.8045 1.4293C33.4674 1.97393 34.0922 2.25775 34.6102 2.2424V2.23473Z"
+                                    fill="currentcolor" />
+                            </svg></div><img
+                            src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/6357b7292b80e4604f432a49_Highlight%20Sparkle%204.svg"
+                            loading="lazy" alt="" class="icon---hero-left" /><img
+                            src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/6357b7290080129618d16442_Sketch-annotation-element-stroke-illustration-filled-trophy.svg"
+                            loading="lazy" alt="" class="icon---hero-right" />
+                        <h1 id="heading" class="hide">Add <span class="text-span-orange-100">WhatsApp Login
+                            </span> <br />to your app/website<br /></h1>
+                    </div>
+                    <div class="description-hero">Say 👋 goodbye to OTPs and hello to a secure, seamless WhatsApp login.
+                        Free forever for unlimited users</div>
+                    <div class="button-group">
+                        <div class="wrap-position__relative">
+                            <!-- <div class="button-cta-position no-margin">
+                                <a
+                                    href="https://write.reword.co/users/auth/google"
+                                    class="button-web-primary w-inline-block">
+                                    <div class="button-content-wrapper">
+                                        <div class="button-icon-wrapper">
+                                            <div class="google-icon w-embed"><svg width="26" height="26"
+                                                    viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M23.6227 10.8784H22.7501V10.8334H13.0001V15.1667H19.1225C18.2293 17.6893 15.8292 19.5001 13.0001 19.5001C9.41046 19.5001 6.50008 16.5897 6.50008 13.0001C6.50008 9.41046 9.41046 6.50008 13.0001 6.50008C14.657 6.50008 16.1645 7.12516 17.3123 8.14621L20.3765 5.082C18.4417 3.27879 15.8536 2.16675 13.0001 2.16675C7.01737 2.16675 2.16675 7.01737 2.16675 13.0001C2.16675 18.9828 7.01737 23.8334 13.0001 23.8334C18.9828 23.8334 23.8334 18.9828 23.8334 13.0001C23.8334 12.2737 23.7587 11.5647 23.6227 10.8784Z"
+                                                        fill="#FFC107" />
+                                                    <path
+                                                        d="M3.41577 7.95771L6.97506 10.568C7.93815 8.18358 10.2706 6.50008 13 6.50008C14.657 6.50008 16.1644 7.12516 17.3122 8.14621L20.3764 5.082C18.4416 3.27879 15.8535 2.16675 13 2.16675C8.83894 2.16675 5.23036 4.51596 3.41577 7.95771Z"
+                                                        fill="#FF3D00" />
+                                                    <path
+                                                        d="M13.0001 23.8332C15.7983 23.8332 18.3409 22.7623 20.2633 21.0209L16.9104 18.1836C15.8227 19.0075 14.4707 19.4999 13.0001 19.4999C10.1823 19.4999 7.7898 17.7032 6.88846 15.1958L3.35571 17.9177C5.14863 21.426 8.78971 23.8332 13.0001 23.8332Z"
+                                                        fill="#4CAF50" />
+                                                    <path
+                                                        d="M23.6226 10.8782H22.75V10.8333H13V15.1666H19.1225C18.6935 16.3783 17.914 17.4232 16.9087 18.1842C16.9092 18.1837 16.9097 18.1837 16.9103 18.1831L20.2632 21.0204C20.026 21.236 23.8333 18.4166 23.8333 12.9999C23.8333 12.2735 23.7586 11.5645 23.6226 10.8782Z"
+                                                        fill="#1976D2" />
+                                                </svg></div>
+                                        </div>
+                                        <div class="button-text-wrapper">
+                                            <div class="text__semi_bold">Start free with Google</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div> -->
+                            <div class="html-embed new hide w-embed"><svg width="56" height="44" viewBox="0 0 86 71"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23.054 40.3958C20.4846 36.46 20.226 33.8584 22.1815 31.5605C26.3538 26.6755 26.2005 23.946 21.4537 18.2816C17.8223 13.9528 17.0437 12.0885 17.7621 9.26499C18.7249 5.41929 13.9365 8.37669 13.7465 12.3542C13.6086 15.2613 14.3645 16.8924 17.4864 20.3612C22.2886 25.7117 22.6381 27.6113 19.5121 31.1198C15.7346 35.321 15.8349 39.3403 19.7829 43.8833C21.7886 46.236 25.4992 44.1654 23.054 40.3958Z"
+                                        fill="currentcolor" />
+                                    <path
+                                        d="M43.8707 27.483C43.7961 28.3202 43.9733 30.246 44.2503 31.7264C45.0427 35.7995 44.8585 36.2275 41.9119 37.3559C36.3944 39.4522 32.9584 45.0768 34.7676 49.0767C36.2823 52.4978 38.994 51.0137 38.2242 47.1738C37.4082 43.0872 38.2842 41.2978 41.8467 39.8649C47.3715 37.647 49.2193 34.501 48.0908 29.3221C47.0944 24.7855 47.6074 23.3525 50.307 23.0876C52.6754 22.8516 55.2921 20.7153 54.066 20.0074C51.0614 18.2413 44.234 23.2598 43.8707 27.483Z"
+                                        fill="currentcolor" />
+                                    <path
+                                        d="M66.1665 45.8256C64.6145 48.5137 64.6517 48.5037 61.3765 47.5875C55.7976 46.0327 49.5539 49.6591 48.334 55.1483C47.2484 60.0235 50.9753 58.0881 51.6004 54.9906C52.4426 50.9181 54.5519 49.7151 58.6125 50.9591C62.157 52.0623 65.0245 51.2342 67.5299 48.3106C68.5789 47.0927 69.3004 45.843 70.0392 44.5089C71.6084 41.7365 73.4114 42.5888 76.0015 44.1471C80.6394 46.9505 83.7844 43.7359 79.2272 41.0105C74.1984 38.0128 69.7196 39.6713 66.1665 45.8256Z"
+                                        fill="currentcolor" />
+                                </svg></div>
+                        </div>
+                        <a onclick="start()" class="login-button header w-inline-block">
+                            <div>Start Free</div>
+                        </a>
+                    </div>
+                    <!-- <div class="image-hero-wrap mobile-only">
+                        <img
+                            src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/64381da3f20b9deca5c55b25_main-image.svg"
+                            loading="eager" alt="Overview of the Software " class="main-image" />
+                        </div>
+                    <div class="lottie-hero-wrap">
+                        <div data-w-id="b306c9eb-8c00-584b-9c6d-56cdef4899e0" data-is-ix2-target="1"
+                            class="lottie_animation" data-animation-type="lottie"
+                            data-src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/63f28275e5b3e026d6a116bb_Illustration%202%20(2).json"
+                            data-loop="1" data-direction="1" data-autoplay="0" data-renderer="svg"
+                            data-default-duration="26" data-duration="0"></div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="section-optimisation wf-section">
+                <div class="container w-container">
+                    <div class="w-layout-grid grid__img-right">
+                        <div id="w-node-eec101c9-d73a-38d8-4f96-45bc64a84fd4-b405e0fe" class="ideation_col">
+                            <div class="breadcrumb">Step 1</div>
+                            <div class="wrap-position__relative"><img
+                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/6438e4019d443ca490898db7_Group%201000003118.svg"
+                                    loading="lazy" alt="" class="icon---heatmaps" />
+                                <h2>User clicks on the WhatsApp Login button.</h2>
+                            </div>
+                            <p class="feature-paragraph-wrap">The user gets redirected to WhatsApp once he clicks on Get
+                                Started Button</p>
+                        </div>
+                        <div class="illustration-col">
+                            <img src="assets/img/1.svg" loading="lazy" alt="" class="block-align-right" />
+                        </div>
+                        <div id="w-node-f00da7d4-02c6-75f5-b5f2-13d51f14dcc6-b405e0fe"
+                            class="illustration-col is-mobile"><img src="assets/img/1.png" loading="lazy"
+                                alt="Result and Analytics" class="block-align-right" /></div>
+                    </div>
+                    <div class="w-layout-grid grid__img-left">
+                        <div id="w-node-_17ca018e-a2f4-ec1a-797b-b4bb4a009de6-b405e0fe"
+                            class="illustration-col is-alternate"><img src="assets/img/2.svg" loading="lazy" alt=""
+                                class="block-align-left is-full-width" /></div>
+                        <div id="w-node-_17ca018e-a2f4-ec1a-797b-b4bb4a009ddb-b405e0fe"
+                            class="ideation_col is-top-margin">
+                            <div class="breadcrumb">Step 2</div>
+                            <div class="wrap-position__relative"><img
+                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/6438e3fa313d5b21839f8fb4_Group.svg"
+                                    loading="lazy" alt="" class="icon---heatmaps" />
+                                <h2>Sends a pre-filled WhatsApp message.</h2>
+                            </div>
+                            <p class="feature-paragraph-wrap">User clicks on the Send Button on WhatsApp with a
+                                pre-filled message.
+                            </p>
+                        </div>
+                        <div id="w-node-_19fbc892-9ffe-5f8b-e74c-77873a6173cf-b405e0fe"
+                            class="illustration-col is-mobile"><img src="assets/img/2.png" loading="lazy"
+                                alt="Research View" class="block-align-right" /></div>
+                    </div>
+                    <div class="w-layout-grid grid__img-right is-last">
+                        <div id="w-node-ca43a452-35bd-01c0-648e-f7620f3cf3f6-b405e0fe" class="ideation_col">
+                            <div class="breadcrumb">Step 3</div>
+                            <div class="wrap-position__relative"><img
+                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/6438e3f84e7f157ce6603bb5_Group%20(1).svg"
+                                    loading="lazy" alt="" class="icon---heatmaps" />
+                                <h2>Redirects the user back to your website/app.</h2>
+                            </div>
+                            <p class="feature-paragraph-wrap">Once user clicks on the link, WhatsApp redirects users
+                                back to the app/website</p>
+                        </div>
+                        <div id="w-node-ca43a452-35bd-01c0-648e-f7620f3cf3ff-b405e0fe" class="illustration-col"><img
+                                src="assets/img/3.svg" loading="lazy" alt="Optimization&#x27;s View"
+                                class="block-align-right" />
+                        </div>
+                        <div id="w-node-e6650201-4b1c-8d3f-dc2f-bcd296df9262-b405e0fe"
+                            class="illustration-col is-mobile"><img src="assets/img/3.png" loading="lazy"
+                                alt="Optimization View" class="block-align-right" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-augmentation wf-section">
+                <div class="container flex-vertical-center is-relative w-container"><img
+                        src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/63cfeb177a87be0f28a39c48_wave%20icon.svg"
+                        loading="lazy" alt="" class="icon---more-features is-home" />
+                    <div class="wrap-position__relative">
+                        <div class="breadcrumb text__center">BENEFITS</div>
+                        <div>
+                            <h2 class="text__center is-monetising">So, Why WhatsApp
+                                <span class="text-span-orange-100 is-readers">Login.</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <!-- <div class="ai-lottie-wrap">
+                        <div data-w-id="64bef32a-17b9-3780-f4fc-9d2725009e2b" data-is-ix2-target="1"
+                            data-animation-type="lottie"
+                            data-src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/63ee86694aec8948d8f4e3b5_Illustration%201.json"
+                            data-loop="1" data-direction="1" data-autoplay="0" data-renderer="svg"
+                            data-default-duration="6.85" data-duration="0"></div><img
+                            src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/63d0d980a383ce43cfa67b66_lines%20orange.svg"
+                            loading="lazy" alt="" class="lottie_shape-icon" />
+                    </div> -->
+                    <!-- <div class="ai-image-wrap"><img
+                            src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/63d27fee0e46d66c30d976ef_augmentation%20image%20mobile.svg"
+                            loading="lazy" width="318" alt="Ai Article Writing" class="image-mobile-only" /></div> -->
+                    <div class="wrap-mt__70 top-margin-120 is-60px-mobile">
+                        <div class="w-layout-grid grid is-augmentation">
+                            <div id="w-node-ce7fd357-c709-a7e0-18b2-077d0a04a881-b405e0fe" class="grid-cards">
+                                <h3 class="card-heading is-desktop_max-22ch">Grow your Business</h3>
+                                <img src="assets/img/4.png" loading="lazy" alt="Trained Internal Links"
+                                    class="top-margin-2rem" />
+                            </div>
+                            <div id="w-node-_6f9cf0c1-cb99-9ba5-a637-44b9b96f7c73-b405e0fe" class="grid-cards">
+                                <h3 class="card-heading is-desktop_max-22ch">No Code Integration</h3><img
+                                    src="assets/img/5.png" loading="lazy" alt="Article Insights"
+                                    class="top-margin-2rem" />
+                            </div>
+                            <div id="w-node-f9ff20e3-976a-1cbc-4d69-a6b60e445439-b405e0fe" class="grid-cards">
+                                <h3 class="card-heading is-desktop_max-22ch">Save OTP Cost</h3>
+                                <img src="assets/img/6.png" loading="lazy" alt="Publish Article by Commands"
+                                    class="top-margin-2rem" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-experiments wf-section">
+                <div class="container flex-vertical-center w-container">
+                    <div class="wrap-position__relative">
+                        <div class="breadcrumb text__center">DEVELOPER EASE</div>
+                        <h2 class="text__center is-monetising">No Code or Pro Code</h2>
+                    </div>
+                    <div class="wrap-mt__70">
+                        <div class="card-bg">
+                            <img src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/6438352a762b5b5db98aedf6_integrations.svg"
+                                loading="lazy" alt="Seo Analytics" class="width__100" />
+                            <div class="max-width__360">
+                                <p class="text__left">
+                                <div class="wrap-position__relative" style="text-align:left;">
+                                    <pre><code>&lt;script src=&quot;https://www.lazyclick.in/lazyclick.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    <pre><code>&lt;script&gt;
 lazyclick(function(wauser) {
-  console.log(wauser);
+    console.log(wauser);
 });
-&lt;/script&gt;
-                    </code></pre>
-                  </div>
+&lt;/script&gt;</code></pre>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-
-        </div>
-
-
-      </div>
-    </section><!-- End Features Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <!-- <section id="testimonials" class="testimonials section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
-                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
-                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
-                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Testimonials Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <!-- <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> --><!-- End Portfolio Section -->
-
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Pricing</h2>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="box">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Free Forever</li>
-                <li>User-Initiated</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="box featured">
-              <h3>Business</h3>
-              <h4><sup>$</sup>30<span> / month</span></h4>
-              <ul>
-                <li>Authencity</li>
-                <li>Business-Initiated</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="https://forms.gle/gwgVUmBBdVTGYxa68" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
-
-    <!-- ======= Frequently Asked Questions Section ======= -->
-    <!-- <section id="faq" class="faq">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Frequently Asked Questions</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="faq-list">
-          <ul>
-            <li data-aos="fade-up" data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i
-                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
-                  gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
-                class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i
-                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
-                  donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
-                  ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
-                class="collapsed">Dolor sit amet consectetur adipiscing elit? <i
-                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
-                  integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
-                  Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi
-                  quis
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4"
-                class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i
-                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
-                  vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
-                  gravida quis blandit turpis cursus in.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="500">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5"
-                class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem
-                dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
-                  nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
-                  tellus in metus vulputate eu scelerisque.
-                </p>
-              </div>
-            </li>
-
-          </ul>
-        </div>
-
-      </div>
-    </section> --><!-- End Frequently Asked Questions Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <!-- <section id="contact" class="contact section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="info-box mb-4">
-              <i class="bx bx-map"></i>
-              <h3>Our Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-box  mb-4">
-              <i class="bx bx-envelope"></i>
-              <h3>Email Us</h3>
-              <p>contact@example.com</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-box  mb-4">
-              <i class="bx bx-phone-call"></i>
-              <h3>Call Us</h3>
-              <p>+1 5589 55488 55</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6 ">
-            <iframe class="mb-4 mb-lg-0"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-              frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-          </div>
-
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            <!-- <div class="section-best-writers wf-section">
+                <div class="container w-container">
+                    <div class="bottom-margin-80px">
+                        <div class="max-width__35rem">
+                            <div class="wrap-position__relative">
+                                <h2 class="max-width__35rem">The best writers are already using Reword.</h2><img
+                                    src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/6424fbcad4819a9a2c75cc50_Heart%20Icon.svg"
+                                    loading="lazy" alt="" class="heart-icon position-right" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials-script-wrapper">
+                        <div class="w-embed w-script">
+                            <div class="shoutout-embed" data-widgetTitle="Reword (1)"
+                                data-widgetId="604b934d-4d79-46c6-9b6b-b013e8e061f5"></div>
+                            <script class="shoutout-script" src="https://shoutout.io/static/website/js/embed.js"
+                                defer></script>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div> -->
+
+            <div id="edge" data-scroll="mid" class="section-edge home wf-section">
+                <div class="container w-container">
+                    <div class="wrap-content__orange flex-vertical">
+                        <div class="max-width-40rem">
+                            <h2 class="heading-3">You won&#x27;t believe it is FREE until you actually try it.</h2>
+                            <p class="paragraph centered">Start WhatsApp Login For free</p>
+                        </div>
+
+                        <a onclick="start()" class="login-button w-inline-block">
+                            <div>Get Started</div>
+
+                        </a>
+                        <img src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/63cfff4702bf7740d20836cc_star%20sparkle.svg"
+                            loading="lazy" width="84" alt="" class="image-5" />
+                    </div>
                 </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
+            </div>
         </div>
-
-      </div>
-    </section> --><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Lazyclick</h3>
-            <p>
-              Bengaluru, Karnataka, 560017 <br>
-              <strong>Phone:</strong><a href="tel:8447050052" style="color: white;"> +91-8447050052</a><br>
-              <strong>Email:</strong> <a href="mailto: hello@lazyclick.in"
-                style="color: white;">hello@lazyclick.in</a><br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="terms.html">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <!--  <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div> -->
-
-        </div>
-      </div>
     </div>
+    <div class="footer text__white wf-section">
+        <div class="container new w-container">
+            <div class="w-layout-grid footer-content-wrapper">
+                <div class="footer-logo-social-wrap new">
+                    <h3>Lazyclick</h3>
+                    <p>
+                        10/259, Chandra Bhawan Bhikhampur Road Deoria, UP, 274001 <br>
+                        <a href="tel:8447050052" style="color: white;"> +91-8447050052</a><br>
+                        <a href="mailto: hello@lazyclick.in"
+                            style="color: white;">hello@lazyclick.in</a><br>
+                    </p>
 
-    <div class="container">
-
-      <div class="copyright-wrap d-md-flex py-4">
-        <div class="me-md-auto text-center text-md-start">
-          <div class="copyright">
-            &copy; Copyright <strong><span>Lazyclick</span></strong>. All Rights Reserved
-          </div>
+                </div>
+                <div id="w-node-acb62211-4d0a-8b44-3232-02e10d4dd5e7-0d4dd5d4" class="footer-links-wrapper">
+                    <div class="footer-link-bold">Company</div>
+                    <a href="" class="footer-link">Pricing</a>
+                    <a href="" class="footer-link">Privacy Policy</a>
+                </div>
+                <!-- <div id="w-node-acb62211-4d0a-8b44-3232-02e10d4dd5f2-0d4dd5d4" class="footer-links-wrapper">
+                    <div class="footer-link-bold">Account</div><a href="https://write.reword.co/users/sign_in"
+                        class="footer-link">Log in</a><a href="https://write.reword.co/users/sign_up"
+                        class="footer-link">Sign up</a><a href="https://write.reword.co/users/password/new"
+                        class="footer-link">Password reset</a>
+                </div>
+                <div id="w-node-acb62211-4d0a-8b44-3232-02e10d4dd5fd-0d4dd5d4" class="footer-links-wrapper">
+                    <div class="footer-link-bold">Resources</div><a href="https://docs.reword.co" target="_blank"
+                        class="footer-link">Learning</a><a
+                        href="https://www.youtube.com/channel/UCvm8nY1SlE7VbBkcY5_HN2w" target="_blank"
+                        class="footer-link">Youtube</a><a href="mailto:hey@reword.co?subject=Reword%20Support%20Request"
+                        class="footer-link">Support</a>
+                </div>
+                <div id="w-node-acb62211-4d0a-8b44-3232-02e10d4dd608-0d4dd5d4" class="footer-links-wrapper">
+                    <div class="footer-link-bold">Free Tools</div><a href="/free-tools/headline-tool"
+                        class="footer-link">Headline Generator</a><a href="/free-tools/subheading-tool"
+                        class="footer-link">Subheading generator</a><a href="/free-tools/topic-idea-tool"
+                        class="footer-link">Topic idea generator</a>
+                </div> -->
+            </div>
+            <div class="footer-logo-social-wrap new mobile">
+                <h3>Lazyclick</h3>
+                <p>
+                    10/259, Chandra Bhawan Bhikhampur Road Deoria, UP, 274001 <br>
+                    <a href="tel:8447050052" style="color: white;"> +91-8447050052</a><br>
+                    <a href="mailto: hello@lazyclick.in"
+                        style="color: white;">hello@lazyclick.in</a><br>
+                </p>
+            </div>
+            <div class="w-layout-grid footer-content-wrapper mobile">
+                <div id="w-node-acb62211-4d0a-8b44-3232-02e10d4dd624-0d4dd5d4" class="footer-links-wrapper">
+                    <div class="footer-link-bold">Company</div>
+                    <a href="#" class="footer-link">Pricing</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                </div>
+                <!-- <div id="w-node-acb62211-4d0a-8b44-3232-02e10d4dd62f-0d4dd5d4" class="footer-links-wrapper">
+                    <div class="footer-link-bold">Account<br /></div><a href="https://write.reword.co/users/sign_in"
+                        class="footer-link">Log in</a><a href="https://write.reword.co/users/sign_up"
+                        class="footer-link">Sign up</a><a href="https://write.reword.co/users/password/new"
+                        class="footer-link">Password reset</a>
+                </div>
+                <div id="w-node-acb62211-4d0a-8b44-3232-02e10d4dd63a-0d4dd5d4" class="footer-links-wrapper">
+                    <div class="footer-link-bold">Resources</div><a href="https://docs.reword.co/" target="_blank"
+                        class="footer-link">Learning</a><a
+                        href="https://www.youtube.com/channel/UCvm8nY1SlE7VbBkcY5_HN2w" target="_blank"
+                        class="footer-link">Youtube</a><a href="mailto:hey@reword.co?subject=Reword%20Support%20Request"
+                        class="footer-link">Support</a>
+                </div>
+                <div id="w-node-acb62211-4d0a-8b44-3232-02e10d4dd645-0d4dd5d4" class="footer-links-wrapper">
+                    <div class="footer-link-bold">Tools<br /></div><a href="#" class="footer-link">Headline
+                        Generator</a><a href="#" class="footer-link">Subheading generator</a><a href="#"
+                        class="footer-link">Topic idea generator</a>
+                </div> -->
+            </div>
+            <div class="footer-rights new">
+                <div class="text-block-2">All rights reserved - Lazyclick 2023</div>
+            </div>
         </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.facebook.com/lazyclickdotin" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="https://www.linkedin.com/company/lazyclick" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
-
     </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-  <!-- <div id="preloader"></div> -->
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=634d41276b882236cc52de2c"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    <script src="https://uploads-ssl.webflow.com/634d41276b882236cc52de2c/js/webflow.b3a7e5d64.js"
+        type="text/javascript"></script>
+    <!-- [Attributes by Finsweet] Disable scrolling -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js"></script>
 </body>
 
 </html>
