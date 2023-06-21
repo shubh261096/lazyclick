@@ -3555,8 +3555,9 @@ a {
 }
 
 .login-button.header {
-    color: #ff6702;
-    border-color: #ff6702;
+    color: #ffffff;
+    background-color: #25D366;
+    border-color: #25D366;
     padding-left: 25px;
     padding-right: 25px;
     transition: color .1s, background-color .1s
@@ -3564,7 +3565,8 @@ a {
 
 .login-button.header:hover {
     color: #fff;
-    background-color: #ff6702
+    background-color: #25D366;
+    border-color: #25D366;
 }
 
 .login-button.ambassador {
