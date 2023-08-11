@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.lazyclick",
+               "sha256_cert_fingerprints": ["74:6A:5C:34:C8:11:BD:91:B5:ED:5E:BA:6C:31:CD:63:59:7F:B7:87:BE:A4:25:78:D6:A2:AA:88:AF:45:D7:A3"] }
+}]
