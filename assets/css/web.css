@@ -8037,3 +8037,48 @@ a {
         align-self: center
     }
 }
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus {
+    outline: none;
+    border-color: #ff6702;
+}
+
+.form-group input[type="email"]::placeholder,
+.form-group input[type="text"]::placeholder,
+.form-group input[type="tel"]::placeholder {
+    color: #999;
+}
+
+.button.top-margin {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: background-color 0.4s cubic-bezier(.215, .61, .355, 1);
+}
+
+.button.top-margin:hover {
+    color: #fff3e9;
+    background-color: #ff6702;
+}
